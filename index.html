@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Éducative Complète</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Application Éducative Complète</h1>
+  <p>Choisis ta matière et commence à apprendre !</p>
+</header>
+
+<nav>
+  <button onclick="selectSubject('maths')">Maths</button>
+  <button onclick="selectSubject('francais')">Français</button>
+  <button onclick="selectSubject('histoire')">Histoire</button>
+  <button onclick="selectSubject('geographie')">Géographie</button>
+  <button onclick="selectSubject('sciences')">Sciences</button>
+</nav>
+
+<main>
+  <section id="home" class="active">
+    <h2>Bienvenue !</h2>
+    <p>Choisis une matière pour commencer.</p>
+  </section>
+
+  <section id="content">
+    <div id="subjectTitle"></div>
+    <div id="tabs">
+      <button onclick="showTab('quiz')">Quiz</button>
+      <button onclick="showTab('exercise')">Exercices</button>
+      <button onclick="showTab('videos')">Vidéos</button>
+      <button onclick="showTab('bonus')">Défis</button>
+    </div>
+    <div id="tabContent"></div>
+  </section>
+
+  <section id="progress">
+    <h2>Progrès</h2>
+    <div id="progressBar"><div id="progressFill"></div></div>
+    <p id="scoreText">Score : 0 / 0</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Application Éducative Complète</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
